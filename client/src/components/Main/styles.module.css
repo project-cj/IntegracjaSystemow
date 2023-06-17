@@ -25,6 +25,31 @@
 	cursor: pointer;
 	margin-right: 20px;
 }
+.gray_btn{
+	border: none;
+	outline: none;
+	padding: 12px 0;
+	background-color: rgb(149, 134, 134);
+	border-radius: 20px;
+	width: 120px;
+	font-weight: bold;
+	font-size: 14px;
+	cursor: pointer;
+	margin: 20px;
+}
+.gray_btn:hover{
+	background-color: rgb(158, 231, 127);
+	transform : scale(1.15);
+}
+.file_buttons{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 20px 20px;
+}
+.import_category{
+	display: flex;
+}
 .white_btn:hover{
 	background-color: rgb(166, 222, 142);
 	transform : scale(1.15);
