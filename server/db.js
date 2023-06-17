@@ -7,5 +7,5 @@ mongoose.connect(`mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@${pr
     }).catch((err) => {
         console.log("Nie można połączyć się z MongoDB. Błąd: " + err)
 })
-
+//hehee
 module.exports = mongoose
