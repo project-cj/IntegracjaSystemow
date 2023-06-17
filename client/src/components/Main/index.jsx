@@ -2,6 +2,8 @@ import styles from "./styles.module.css"
 import { useEffect, useState } from "react"
 import axios from "axios"
 import { Link, useNavigate } from "react-router-dom"
+import saveAs from "file-saver"
+import Charts from '../Chart'
 const Main = () => {
     //navigation handlers
     const navigate = useNavigate()
@@ -31,7 +33,9 @@ const Main = () => {
         })
         .then(function(json){
             console.log(json.results[0])
-            setFileData(json.results[0])
+            const data = json.results[0]
+            data.id = fileProduct
+            setFileData(data)
         })
     }
     /*
@@ -42,8 +46,9 @@ const Main = () => {
     const handleImportJson = () => {
         getData(fileProduct)
     }
-    const handleExportJson = () => {
-
+    const handleExportJson = async () => {
+        var blob = new Blob([JSON.stringify(fileData)], {type: "text/plain;charset=utf-8"});
+        saveAs(blob, "rice.json");
     }
     const handleImportXml = () => {
 
@@ -52,17 +57,29 @@ const Main = () => {
         
     }
     const handleImportDb = async () => {
-        const data = await axios.post('http://localhost:8080/api/item/import', {
-            product: fileProduct
-        })
-        setFileData(data.data)
-        console.log("Pobrano dane Mongo")
-        console.log(data)
+        try {
+            const data = await axios.post('http://localhost:8080/api/item/import', {
+                product: fileProduct
+            })
+            setFileData(data.data)
+            console.log("Pobrano dane Mongo")
+        } catch (e) {
+            alert(e.response.data.message)
+            console.log(e)
+        }
+        
     }
     const handleExportDb = async () => {
-        await axios.post('http://localhost:8080/api/item/export', {
-            product: {...fileData, id: fileProduct}
-        })
+        try {
+            const data = await axios.post('http://localhost:8080/api/item/export', {
+                product: {...fileData, id: fileProduct}
+            })
+            console.log("Wyslano dane mongo")
+        } catch (e) {
+            alert(e.response.data.message)
+            console.log(e)
+        }
+        
     }
 
 
@@ -70,14 +87,13 @@ const Main = () => {
     return (
         <div className={styles.main_container}>
             <nav className={styles.navbar}>
-                <h1>Rezerwacja pokoi</h1>
+                <h1>Integracja systemów</h1>
                 <div className = {styles.buttons_container}>
                     <button className={styles.white_btn} onClick = {handleMain}>Strona główna</button>
                     <button className={styles.white_btn} onClick={handleLogout}> Wyloguj </button>
                 </div>
             </nav>
             <div className={styles.main}>
-                <h1>Integracja systemow</h1>
                 <h2>Wybierz produkt do importu</h2>
                 <select className = {styles.select} onChange={e => setFileProduct(e.target.value)}>
                 <option value="" selected disabled hidden>Wybierz produkt</option>
@@ -105,7 +121,9 @@ const Main = () => {
                         </div>
                     </div>
                 }
-                {fileData && fileData.values.length>0 && fileData.values.map((item, key) => <p key={key}>Rok: {item.year} Cena: {item.val}</p>)}
+                {/*fileData && fileData.values.length>0 && fileData.values.map((item, key) => <p key={key}>Rok: {item.year} Cena: {item.val}</p>)*/}
+                {fileData && fileData.values.length>0 && <Charts data={fileData}></Charts>}
+                
             </div>
         </div>
     )
