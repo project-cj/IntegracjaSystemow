@@ -10,7 +10,7 @@ router.post('/import', async (req, res) => {
         //DB isolation level REPEATABLE READ
         let session = db.startSession();
         (await session).startTransaction({ readConcern: { level: 'snapshot' } });
-        const product = await Item.findOne({id: req.body.product}, '-_id');
+        const product = await Item.findOne({id: req.body.product}, '-_id -__v');
         (await session).commitTransaction();
         (await session).endSession()
         if(product){
