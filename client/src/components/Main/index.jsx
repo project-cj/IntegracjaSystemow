@@ -4,7 +4,10 @@ import axios from "axios"
 import { Link, useNavigate } from "react-router-dom"
 import saveAs from "file-saver"
 import Charts from '../Chart'
+var xml2js = require('xml2js');
+
 const Main = () => {
+    var parseString = require('xml2js').parseString;
     //navigation handlers
     const navigate = useNavigate()
     const handleLogout = () => {
@@ -32,11 +35,52 @@ const Main = () => {
             return response.json()
         })
         .then(function(json){
-            console.log(json.results[0])
-            const data = json.results[0]
-            data.id = fileProduct
-            setFileData(data)
+            if(json.results){
+                console.log(json.results[0])
+                const data = json.results[0]
+                data.id = fileProduct
+                setFileData(data)
+            } else {
+                console.log(json)
+                const data = json
+                data.id = fileProduct
+                setFileData(data)
+            }
+            
         })
+    }
+    const getDataXML = (itemName) => {
+        console.log(itemName+'.xml')
+        fetch(itemName+'.xml')
+        .then(response => response.text())
+        .then(data => {
+            parseString(data, function (err, result) {
+                if(result.singleVariableData){
+                    const x = result.singleVariableData.results[0].unitData[0]
+                    x.id = fileProduct
+                    x.name = x.name[0]
+                    x.values = x.values[0].yearVal
+                    x.values = x.values.map((item) => item = {
+                        year: item.year[0],
+                        val: parseFloat(item.val[0]),
+                        attrId: parseInt(item.attrId[0])
+                    })
+                    setFileData(x)
+                }
+                if(result.root){
+                    const x = result.root
+                    x.id = fileProduct
+                    x.name = x.name[0]
+                    x.values = x.values.map((item) => item = {
+                        year: item.year[0],
+                        val: parseFloat(item.val[0]),
+                        attrId: parseInt(item.attrId[0])
+                    })
+                    setFileData(x)
+                }
+            });
+        })
+
     }
     /*
     useEffect(() => {
@@ -48,13 +92,17 @@ const Main = () => {
     }
     const handleExportJson = async () => {
         var blob = new Blob([JSON.stringify(fileData)], {type: "text/plain;charset=utf-8"});
-        saveAs(blob, "rice.json");
+        saveAs(blob, fileProduct+'.json');
     }
     const handleImportXml = () => {
-
+        getDataXML(fileProduct)
     }
     const handleExportXml = () => {
-        
+        var builder = new xml2js.Builder();
+        var xml = builder.buildObject(fileData);
+        console.log(xml)
+        var blob = new Blob([xml], {type: "text/plain;charset=utf-8"});
+        saveAs(blob, fileProduct+'.xml')
     }
     const handleImportDb = async () => {
         try {
