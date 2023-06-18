@@ -18,6 +18,8 @@ const Main = () => {
     const handleMain = () => {
         console.log(fileData)
         console.log(fileProduct)
+        console.log(beginYear)
+        console.log(endYear)
         //navigate('/')
     }
 
@@ -29,6 +31,9 @@ const Main = () => {
         {key: "rice", value: "Ryż"},
         {key: "rice2", value: "Ryż2"}
     ]
+    const [beginYear, setBeginYear] = useState()
+    const [endYear, setEndYear] = useState()
+
     const getData = (itemName) => {
         fetch(itemName+'.json')
         .then(function(response){
@@ -46,7 +51,6 @@ const Main = () => {
                 data.id = fileProduct
                 setFileData(data)
             }
-            
         })
     }
     const getDataXML = (itemName) => {
@@ -168,6 +172,29 @@ const Main = () => {
                             <h2>Operacje na bazie danych</h2>
                             <button className={styles.gray_btn} onClick = {handleImportDb}>Importuj SQL</button>
                             <button className={styles.gray_btn} onClick = {handleExportDb}>Eksportuj SQL</button>
+                        </div>
+                    </div>
+                }
+                {fileData && fileData.values.length>0 &&
+                    <div className={styles.select_box}>
+                        <h2>Wybierz zakres lat</h2>
+                        <div className={styles.select_box_2}>
+                            <div className={styles.select_box_3}>
+                                <h3>Data początkowa</h3>
+                                <select className = {styles.select} onChange={e => setBeginYear(e.target.value)} on>
+                                    {fileData.values.map(obj=>(
+                                        <option key={obj.year} value = {obj.year}>{obj.year}</option>
+                                    ))}
+                                </select>
+                            </div>
+                            <div className={styles.select_box_3}>
+                                <h3>Data końcowa</h3>
+                                <select className = {styles.select} onChange={e => setEndYear(e.target.value)}>
+                                {fileData.values.map(obj=>(
+                                    <option selected key={obj.year} value = {obj.year}>{obj.year}</option>
+                                ))}
+                                </select>
+                            </div>
                         </div>
                     </div>
                 }
