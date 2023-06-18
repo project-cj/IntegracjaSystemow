@@ -111,6 +111,7 @@ const Main = () => {
             })
             setFileData(data.data)
             console.log("Pobrano dane Mongo")
+            alert("Zaimportowano dane z bazy!")
         } catch (e) {
             alert(e.response.data.message)
             console.log(e)
@@ -123,6 +124,7 @@ const Main = () => {
                 product: {...fileData, id: fileProduct}
             })
             console.log("Wyslano dane mongo")
+            alert("Zapisano dane w bazie!")
         } catch (e) {
             alert(e.response.data.message)
             console.log(e)
