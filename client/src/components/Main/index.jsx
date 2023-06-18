@@ -35,7 +35,7 @@ const Main = () => {
     const [endYear, setEndYear] = useState()
 
     const getData = (itemName) => {
-        fetch(itemName+'.json')
+        return fetch(itemName+'.json')
         .then(function(response){
             return response.json()
         })
@@ -86,11 +86,17 @@ const Main = () => {
         })
 
     }
-    /*
+    
     useEffect(() => {
-        
-    }, [])
-    */
+        if(fileData.values.length>0){
+            if(!beginYear && !endYear){
+                setBeginYear(fileData.values[0].year)
+                setEndYear(fileData.values[fileData.values.length - 1].year)
+                console.log("x")
+            }
+        }     
+    }, [fileData])
+    
     const handleImportJson = () => {
         getData(fileProduct)
     }
