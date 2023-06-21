@@ -25,35 +25,26 @@ const Main = () => {
         console.log(fileProduct)
         console.log(beginYear)
         console.log(endYear)
-        
-        let dat = fileDataSecond.values.filter((obj) => obj.year>"2001")
-        dat = dat.filter((obj) => obj.year<"2010")
-        setFileData({ ...fileDataSecond, values: [...dat] });
-
         //navigate('/')
     }
-
-
     //data handlers
-    
-
     const fileProducts = [
-        {key: "rice", value: "Ryż - za 1kg"},
-        {key: "butter", value: "Masło świeże o zawartości tłuszczu ok. 82,5% - za 200g"},
-        {key: "roll", value: "Bułka pszenna - za 50g"},
-        {key: "bread", value: "Chleb pszenno-żytni - za 0,5kg"},
-        {key: "sausage", value: "Kiełbasa wędzona - za 1kg"},
-        {key: "oil", value: "Olej rzepakowy produkcji krajowej - za 1l"},
-        {key: "sugar", value: "Cukier biały kryształ - za 1kg"},
-        {key: "honey", value: "Miód pszczeli - za 400g"},
-        {key: "eggs", value: "Jaja kurze świeże - za 1szt."},
-        {key: "pasta", value: "Makaron jajeczny - za 400g"}
+        {key: "rice", value: "Ryż - za 1kg", id: "4992"},
+        {key: "butter", value: "Masło świeże o zawartości tłuszczu ok. 82,5% - za 200g", id: "4981"},
+        {key: "roll", value: "Bułka pszenna - za 50g", id: "4949"},
+        {key: "bread", value: "Chleb pszenno-żytni - za 0,5kg", id: "8260"},
+        {key: "sausage", value: "Kiełbasa wędzona - za 1kg", id: "4964"},
+        {key: "oil", value: "Olej rzepakowy produkcji krajowej - za 1l", id: "4984"},
+        {key: "sugar", value: "Cukier biały kryształ - za 1kg", id: "4994"},
+        {key: "honey", value: "Miód pszczeli - za 400g", id: "4995"},
+        {key: "eggs", value: "Jaja kurze świeże - za 1szt.", id: "4993"},
+        {key: "pasta", value: "Makaron jajeczny - za 400g", id: "4952"}
     ]
     const [beginYear, setBeginYear] = useState()
     const [endYear, setEndYear] = useState()
 
     const getData = (itemName) => {
-        return fetch(itemName+'.json')
+        fetch(itemName+'.json')
         .then(function(response){
             return response.json()
         })
@@ -107,6 +98,37 @@ const Main = () => {
             });
         })
 
+    }
+
+    const getDataAPI = async (itemName) => {
+        const prod = fileProducts.filter((obj) => obj.key == itemName)
+        const id = prod[0].id
+        const link = "https://bdl.stat.gov.pl/api/v1/data/by-variable/"+id+"?format=json&unit-level=0"
+        try{
+            await fetch(link)
+            .then(function(response){
+                return response.json()
+            })
+            .then(function(json){
+                if(json.results){
+                    console.log(json.results[0])
+                    const data = json.results[0]
+                    data.id = fileProduct
+                    setFileData(data)
+                    setFileDataSecond(data)
+                } else {
+                    console.log(json)
+                    const data = json
+                    data.id = fileProduct
+                    setFileData(data)
+                    setFileDataSecond(data)
+                }
+            })
+        } catch (e) {
+            alert(e)
+            console.log(e)
+        }
+        
     }
     
     useEffect(() => {
@@ -174,18 +196,20 @@ const Main = () => {
             console.log(e)
         }
     }
-    const handleImportAPI = async () => {
-
+    const handleImportAPI = () => {
+        getDataAPI(fileProduct)
     }
 
-    const handleExportAPI = async () => {
+    const handleResetData = () => {
         
     }
 
+    /*
     const handleLog = () => {
         console.log(fileData)
         console.log(fileDataSecond)
     }
+    */
 
     //main
     return (
@@ -219,13 +243,13 @@ const Main = () => {
                         </div>
                         <div className={styles.file_buttons}>
                             <h2>Operacje na bazie danych*</h2>
-                            <button className={styles.gray_btn} onClick = {handleImportDb}>Importuj SQL</button>
-                            <button className={styles.gray_btn} onClick = {handleExportDb}>Eksportuj SQL</button>
+                            <button className={styles.gray_btn} onClick = {handleImportDb}>Importuj DB</button>
+                            <button className={styles.gray_btn} onClick = {handleExportDb}>Eksportuj DB</button>
                         </div>
                         <div className={styles.file_buttons}>
                             <h2>Operacje na API i resetowanie danych*</h2>
                             <button className={styles.gray_btn} onClick = {handleImportAPI}>Importuj API</button>
-                            <button className={styles.gray_btn} onClick = {handleExportAPI}>Reset danych</button>
+                            <button className={styles.gray_btn} onClick = {handleResetData}>Reset danych</button>
                         </div>
                     </div>
                 }

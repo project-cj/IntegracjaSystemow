@@ -19,7 +19,7 @@ const Charts = (props) => {
         labels: labels,
         datasets: [
             {
-                label: "Cena",
+                label: "Cena [zł]",
                 data: values,
                 backgroundColor: 'rgba(75,192,192,1)',
                 borderColor: 'rgba(75,192,192,1)',
