@@ -211,7 +211,6 @@ const Main = () => {
                             <h2>Operacje na plikach JSON</h2>
                             <button className={styles.gray_btn} onClick = {handleImportJson}>Importuj JSON</button>
                             <button className={styles.gray_btn} onClick = {handleExportJson}>Eksportuj JSON</button>
-                            
                         </div>
                         <div className={styles.file_buttons}>
                             <h2>Operacje na plikach XML</h2>
