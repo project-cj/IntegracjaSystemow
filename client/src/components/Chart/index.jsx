@@ -2,13 +2,15 @@ import styles from "./styles.module.css"
 import { useEffect, useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { Line } from 'react-chartjs-2';
-import { CategoryScale, LinearScale, Chart, PointElement, LineElement} from "chart.js";
+import { CategoryScale, LinearScale, Chart, PointElement, LineElement, Tooltip, Legend} from "chart.js";
 
 const Charts = (props) => {
     Chart.register(CategoryScale);
     Chart.register(LinearScale);
     Chart.register(PointElement)
     Chart.register(LineElement)
+    Chart.register(Tooltip)
+    Chart.register(Legend)
     const item = props.data.values
     const labels = item.map((it) => it.year)
     const values = item.map((it) => it.val)
@@ -17,11 +19,12 @@ const Charts = (props) => {
         labels: labels,
         datasets: [
             {
-                label: "Dane",
+                label: "Cena",
                 data: values,
-                backgroundColor: 'rgba(0,0,0,1)',
+                backgroundColor: 'rgba(75,192,192,1)',
                 borderColor: 'rgba(75,192,192,1)',
-                borderWidth: 1
+                borderWidth: 1,
+                tension: 0.1
             }
         ]
     }
@@ -39,7 +42,7 @@ const Charts = (props) => {
     }
     return (
         <div className={styles.main_container}>
-            <Line data={data}></Line>
+            <Line data={data} options={options}></Line>
         </div>
     )
 }

@@ -28,8 +28,16 @@ const Main = () => {
     const [fileData, setFileData] = useState([])
     const [fileProduct, setFileProduct] = useState("")
     const fileProducts = [
-        {key: "rice", value: "Ryż"},
-        {key: "rice2", value: "Ryż2"}
+        {key: "rice", value: "Ryż - za 1kg"},
+        {key: "butter", value: "Masło świeże o zawartości tłuszczu ok. 82,5% - za 200g"},
+        {key: "roll", value: "Bułka pszenna - za 50g"},
+        {key: "bread", value: "Chleb pszenno-żytni - za 0,5kg"},
+        {key: "sausage", value: "Kiełbasa wędzona - za 1kg"},
+        {key: "oil", value: "Olej rzepakowy produkcji krajowej - za 1l"},
+        {key: "sugar", value: "Cukier biały kryształ - za 1kg"},
+        {key: "honey", value: "Miód pszczeli - za 400g"},
+        {key: "eggs", value: "Jaja kurze świeże - za 1szt."},
+        {key: "pasta", value: "Makaron jajeczny - za 400g"}
     ]
     const [beginYear, setBeginYear] = useState()
     const [endYear, setEndYear] = useState()
@@ -178,6 +186,11 @@ const Main = () => {
                             <h2>Operacje na bazie danych</h2>
                             <button className={styles.gray_btn} onClick = {handleImportDb}>Importuj SQL</button>
                             <button className={styles.gray_btn} onClick = {handleExportDb}>Eksportuj SQL</button>
+                        </div>
+                        <div className={styles.file_buttons}>
+                            <h2>Operacje na API i resetowanie danych</h2>
+                            <button className={styles.gray_btn} onClick = {handleImportDb}>Importuj API</button>
+                            <button className={styles.gray_btn} onClick = {handleExportDb}>Reset danych</button>
                         </div>
                     </div>
                 }

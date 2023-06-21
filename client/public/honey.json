@@ -1,6 +1,6 @@
 {
     "totalRecords": 1,
-    "variableId": 4992,
+    "variableId": 4995,
     "measureUnitId": 4,
     "aggregateId": 1,
     "lastUpdate": null,
@@ -11,122 +11,122 @@
             "values": [
                 {
                     "year": "1999",
-                    "val": 2.43,
+                    "val": 6.38,
                     "attrId": 1
                 },
                 {
                     "year": "2000",
-                    "val": 2.39,
+                    "val": 6.40,
                     "attrId": 1
                 },
                 {
                     "year": "2001",
-                    "val": 2.29,
+                    "val": 6.48,
                     "attrId": 1
                 },
                 {
                     "year": "2002",
-                    "val": 2.12,
+                    "val": 6.66,
                     "attrId": 1
                 },
                 {
                     "year": "2003",
-                    "val": 1.98,
+                    "val": 6.73,
                     "attrId": 1
                 },
                 {
                     "year": "2004",
-                    "val": 2.59,
+                    "val": 6.98,
                     "attrId": 1
                 },
                 {
                     "year": "2005",
-                    "val": 2.74,
+                    "val": 7.42,
                     "attrId": 1
                 },
                 {
                     "year": "2006",
-                    "val": 2.63,
+                    "val": 7.50,
                     "attrId": 1
                 },
                 {
                     "year": "2007",
-                    "val": 2.89,
+                    "val": 7.47,
                     "attrId": 1
                 },
                 {
                     "year": "2008",
-                    "val": 3.99,
+                    "val": 7.98,
                     "attrId": 1
                 },
                 {
                     "year": "2009",
-                    "val": 4.63,
+                    "val": 8.81,
                     "attrId": 1
                 },
                 {
                     "year": "2010",
-                    "val": 4.19,
+                    "val": 9.78,
                     "attrId": 1
                 },
                 {
                     "year": "2011",
-                    "val": 4.10,
+                    "val": 10.84,
                     "attrId": 1
                 },
                 {
                     "year": "2012",
-                    "val": 4.27,
+                    "val": 10.87,
                     "attrId": 1
                 },
                 {
                     "year": "2013",
-                    "val": 4.15,
+                    "val": 10.85,
                     "attrId": 1
                 },
                 {
                     "year": "2014",
-                    "val": 3.92,
+                    "val": 11.01,
                     "attrId": 1
                 },
                 {
                     "year": "2015",
-                    "val": 3.79,
+                    "val": 11.16,
                     "attrId": 1
                 },
                 {
                     "year": "2016",
-                    "val": 3.80,
+                    "val": 11.55,
                     "attrId": 1
                 },
                 {
                     "year": "2017",
-                    "val": 3.85,
+                    "val": 11.99,
                     "attrId": 1
                 },
                 {
                     "year": "2018",
-                    "val": 3.81,
+                    "val": 12.49,
                     "attrId": 1
                 },
                 {
                     "year": "2019",
-                    "val": 3.96,
+                    "val": 12.68,
                     "attrId": 1
                 },
                 {
                     "year": "2020",
-                    "val": 4.24,
+                    "val": 13.02,
                     "attrId": 1
                 },
                 {
                     "year": "2021",
-                    "val": 4.59,
+                    "val": 13.31,
                     "attrId": 1
                 },
                 {
                     "year": "2022",
-                    "val": 5.72,
+                    "val": 13.96,
                     "attrId": 1
                 }
             ]
