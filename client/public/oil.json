@@ -6,255 +6,128 @@
     "lastUpdate": null,
     "results": [
         {
+            "id": "000000000000",
+            "name": "POLSKA",
             "values": [
                 {
-                    "date": "2013-02-20",
-                    "title": "Wiktor Janukowycz chce iść do Europy. Analitycy wątpią",
-                    "link": "https://www.rp.pl/swiat/art5707491-wiktor-janukowycz-chce-isc-do-europy-analitycy-watpia"
+                    "year": "1999",
+                    "val": 4.91,
+                    "attrId": 1
                 },
                 {
-                    "date": "2013-04-01",
-                    "title": "Prezydent Naddniestrza chce integracji z Rosją",
-                    "link": "https://wiadomosci.onet.pl/swiat/prezydent-naddniestrza-chce-integracji-z-rosja/q8020"
+                    "year": "2000",
+                    "val": 4.18,
+                    "attrId": 1
                 },
                 {
-                    "date": "2013-06-18",
-                    "title": "Łukaszenka: widzę Ukrainę w Unii Celnej z Rosją",
-                    "link": "https://www.polskieradio.pl/75/921/artykul/869134,lukaszenka-widze-ukraine-w-unii-celnej-z-rosja"
+                    "year": "2001",
+                    "val": 4.09,
+                    "attrId": 1
                 },
                 {
-                    "date": "2013-04-01",
-                    "title": "NATO – ROSJA – UKRAINA: PARTNERZY CZY RYWALE?",
-                    "link": "https://geopolityka.net/nato-rosja-ukraina-partnerzy-czy-rywale/"
+                    "year": "2002",
+                    "val": 4.13,
+                    "attrId": 1
                 },
                 {
-                    "date": "2013-08-28",
-                    "title": "Rosja przeciwdziała zbliżeniu Ukrainy z Unią Europejską",
-                    "link": "https://www.osw.waw.pl/pl/publikacje/analizy/2013-08-28/rosja-przeciwdziala-zblizeniu-ukrainy-z-unia-europejska"
+                    "year": "2003",
+                    "val": 4.45,
+                    "attrId": 1
                 },
                 {
-                    "date": "2013-08-02",
-                    "title": "Ukraina: atak tortowy na rosyjski bank",
-                    "link": "https://forsal.pl/artykuly/723088,rosja-ukraina-zywnosc-wojna-handlowa.html"
+                    "year": "2004",
+                    "val": 4.78,
+                    "attrId": 1
                 },
                 {
-                    "date": "2013-09-04",
-                    "title": "Putin: kiedyś los znów złączy Rosję i Ukrainę",
-                    "link": "https://www.tvp.info/12296727/putin-kiedys-los-znow-zlaczy-rosje-i-ukraine"
+                    "year": "2005",
+                    "val": 4.72,
+                    "attrId": 1
                 },
                 {
-                    "date": "2013-11-22",
-                    "title": "Janukowycz: Ukraina nie podpisała umowy z UE przez rosyjski szantaż",
-                    "link": "https://www.gazetaprawna.pl/wiadomosci/artykuly/747774,janukowycz-ukraina-nie-podpisala-umowy-z-ue-przez-rosyjski-szantaz.html"
+                    "year": "2006",
+                    "val": 4.70,
+                    "attrId": 1
                 },
                 {
-                    "date": "2013-11-22",
-                    "title": "Komentarze po decyzji ukraińskiego rządu: zdrada stanu, polaryzacja społeczeństwa",
-                    "link": "https://wgospodarce.pl/informacje/8539-komentarze-po-decyzji-ukrainskiego-rzadu-zdrada-stanu-polaryzacja-spoleczenstwa"
+                    "year": "2007",
+                    "val": 4.91,
+                    "attrId": 1
                 },
                 {
-                    "date": "2013-12-17",
-                    "title": "Ukraina podpisała porozumienie z Rosją",
-                    "link": "https://www.money.pl/gospodarka/wiadomosci/artykul/ukraina;podpisala;porozumienie;z;rosja,61,0,1444157.html"
+                    "year": "2008",
+                    "val": 5.98,
+                    "attrId": 1
                 },
                 {
-                    "date": "2013-12-17",
-                    "title": "Janukowycz negocjuje z Putinem. Czy Ukraina wpadnie w objęcia Rosji?",
-                    "link": "https://www.newsweek.pl/swiat/trwaja-rozmowy-prezydenta-janukowycza-z-wladimirem-putinem-newsweekpl/d9fscg0"
+                    "year": "2009",
+                    "val": 6.10,
+                    "attrId": 1
                 },
                 {
-                    "date": "2014-01-26",
-                    "title": "Majdan trwa, rewolucja ogarnia już prawie całą Ukrainę [relacja]",
-                    "link": "https://www.rp.pl/swiat/art5208761-majdan-trwa-rewolucja-ogarnia-juz-prawie-cala-ukraine-relacja"
+                    "year": "2010",
+                    "val": 5.85,
+                    "attrId": 1
                 },
                 {
-                    "date": "2014-01-19",
-                    "title": "Rosjanie próbują ukryć wojska na Krymie przed misją OBWE? Komisja Europejska przyjęła pakiet wsparcia dla Ukrainy. Nawet 11 mld euro",
-                    "link": "https://wyborcza.pl/relacje/14,185171,15300590,Rosjanie_probuja_ukryc_wojska_na_Krymie_przed_misja.html"
+                    "year": "2011",
+                    "val": 6.70,
+                    "attrId": 1
                 },
                 {
-                    "date": "2014-03-01",
-                    "title": "Rosja: Putin dostał zgodę na użycie wojska na Ukrainie",
-                    "link": "https://www.gazetaprawna.pl/wiadomosci/artykuly/781072,rosja-i-krym-putin-dostal-zgode-na-uzycie-wojska-na-ukrainie.html"
+                    "year": "2012",
+                    "val": 6.98,
+                    "attrId": 1
                 },
                 {
-                    "date": "2014-02-21",
-                    "title": "Ukraina jest bankrutem. Długi wobec Rosji sięgają 30 mld dol.",
-                    "link": "https://www.newsweek.pl/biznes/ukraina-na-skraju-bankructwa-na-uratowanie-potrzeba-150-mld-dolarow/587df5w"
+                    "year": "2013",
+                    "val": 6.87,
+                    "attrId": 1
                 },
                 {
-                    "date": "2014-03-23",
-                    "title": "Rosja już rozdziela ukraińskie ziemie. Szokujący list",
-                    "link": "https://www.money.pl/gospodarka/wiadomosci/artykul/rosja;juz;rozdziela;ukrainskie;ziemie;szokujacy;list,169,0,1501609.html"
+                    "year": "2014",
+                    "val": 6.33,
+                    "attrId": 1
                 },
                 {
-                    "date": "2014-03-04",
-                    "title": "Ukraina: jak znaleźć wyjście z kryzysowej sytuacji?",
-                    "link": "https://www.europarl.europa.eu/news/pl/headlines/world/20140303STO37479/ukraina-jak-znalezc-wyjscie-z-kryzysowej-sytuacji"
+                    "year": "2015",
+                    "val": 5.90,
+                    "attrId": 1
                 },
                 {
-                    "date": "2014-04-17",
-                    "title": "Rosja straciła już ponad 100 mld dolarów na wojnie z Ukrainą",
-                    "link": "https://www.money.pl/gospodarka/wiadomosci/artykul/rosja;stracila;juz;ponad;100;mld;dolarow;na;wojnie;z;ukraina,164,0,1516452.html"
+                    "year": "2016",
+                    "val": 5.84,
+                    "attrId": 1
                 },
                 {
-                    "date": "2014-04-19",
-                    "title": "Nienasycona Rosja jako niedźwiedź. Połknie wschodnią Ukrainę?",
-                    "link": "https://tvn24.pl/swiat/nienasycona-rosja-jako-niedzwiedz-polknie-wschodnia-ukraine-ra420180-3357216"
+                    "year": "2017",
+                    "val": 6.10,
+                    "attrId": 1
                 },
                 {
-                    "date": "2014-04-13",
-                    "title": "Rosyjskie rozłamywanie Ukrainy. Czy Kreml rozbierze ją kawałek po kawałku?",
-                    "link": "https://www.newsweek.pl/swiat/sytuacja-na-ukrainie-wladimir-putin-donbas-ukraina-rosja-euromajdan-newsweekpl/b9nfqlj"
+                    "year": "2018",
+                    "val": 6.06,
+                    "attrId": 1
                 },
                 {
-                    "date": "2014-05-17",
-                    "title": "Konflikt na Ukrainie. Rosja żąda wstrzymania działań wojennych",
-                    "link": "https://www.money.pl/gospodarka/wiadomosci/artykul/konflikt;na;ukrainie;rosja;zada;wstrzymania;dzialan;wojennych,134,0,1538694.html"
+                    "year": "2019",
+                    "val": 6.23,
+                    "attrId": 1
                 },
                 {
-                    "date": "2014-05-02",
-                    "title": "Na Ukrainie prześladują Rosjan? Kreml zmyślił pretekst do interwencji",
-                    "link": "https://tvn24.pl/swiat/nienasycona-rosja-jako-niedzwiedz-polknie-wschodnia-ukraine-ra420180-3357216"
+                    "year": "2020",
+                    "val": 6.67,
+                    "attrId": 1
                 },
                 {
-                    "date": "2014-04-30",
-                    "title": "Ługańsk: Prorosyjscy separatyści bez trudu zajmują kolejne budynki administracji",
-                    "link": "https://www.newsweek.pl/swiat/ukraina-relacja-na-zywo-z-ukrainy-rosja-atakuje-newsweekpl/lz3zlyd"
+                    "year": "2021",
+                    "val": 7.47,
+                    "attrId": 1
                 },
                 {
-                    "date": "2014-07-01",
-                    "title": "Rosja, Ukraina i Krym - kryzys był do przewidzenia?",
-                    "link": "https://www.nato.int/docu/review/pl/articles/2014/07/01/rosja-ukraina-i-krym-kryzys-byl-do-przewidzenia/index.html"
-                },
-                {
-                    "date": "2014-07-24",
-                    "title": "Wojna na Ukrainie. USA: Rosja ostrzeliwuje Ukrainę artylerią ze swego terytorium",
-                    "link": "https://www.money.pl/gospodarka/wiadomosci/artykul/wojna;na;ukrainie;usa;rosja;ostrzeliwuje;ukraine;artyleria;ze;swego;terytorium,113,0,1587825.html"
-                },
-                {
-                    "date": "2014-08-29",
-                    "title": "Wojna na Ukrainie. Rosjanie zajmują kolejne miejscowości. Co zrobi UE?",
-                    "link": "https://www.money.pl/gospodarka/wiadomosci/artykul/wojna;na;ukrainie;rosjanie;zajmuja;kolejne;miejscowosci;co;zrobi;ue,86,0,1607766.html"
-                },
-                {
-                    "date": "2014-08-20",
-                    "title": "Rosyjska polityka wobec Ukrainy: lokalne działania, globalne cele",
-                    "link": "https://www.osw.waw.pl/pl/publikacje/analizy/2014-08-20/rosyjska-polityka-wobec-ukrainy-lokalne-dzialania-globalne-cele"
-                },
-                {
-                    "date": "2014-09-03",
-                    "title": "Rosyjska interwencja zbrojna we wschodniej Ukrainie",
-                    "link": "https://www.osw.waw.pl/pl/publikacje/analizy/2014-09-03/rosyjska-interwencja-zbrojna-we-wschodniej-ukrainie"
-                },
-                {
-                    "date": "2014-09-18",
-                    "title": "Wojna na Ukrainie. Zawieszenie broni to fikcja?",
-                    "link": "https://www.money.pl/gospodarka/wiadomosci/artykul/wojna;na;ukrainie;zawieszenie;broni;to;fikcja,250,0,1620218.html"
-                },
-                {
-                    "date": "2014-10-20",
-                    "title": "Sikorski: Putin chciał wciągnąć Polskę w rozbiór Ukrainy",
-                    "link": "https://www.rp.pl/swiat/art4839051-sikorski-putin-chcial-wciagnac-polske-w-rozbior-ukrainy"
-                },
-                {
-                    "date": "2014-10-09",
-                    "title": "Wojna na Ukrainie. Rosjanie zajęli...",
-                    "link": "https://www.money.pl/gospodarka/wiadomosci/artykul/wojna-na-ukrainie-rosjanie-zajeli-,230,0,1635046.html"
-                },
-                {
-                    "date": "2014-11-02",
-                    "title": "Wojna na Ukrainie. Gorbaczow broni polityki Putina",
-                    "link": "https://www.money.pl/gospodarka/wiadomosci/artykul/wojna-na-ukrainie-gorbaczow-broni-polityki,245,0,1650677.html"
-                },
-                {
-                    "date": "2014-11-19",
-                    "title": "Ukraina zatwierdziła jednostronne wytyczenie granicy z Rosją",
-                    "link": "https://tvn24.pl/swiat/ukraina-zatwierdzila-jednostronne-wytyczenie-granicy-z-rosja-ra490303-3419093"
-                },
-                {
-                    "date": "2014-12-15",
-                    "title": "Miedwiediew: nad Ukrainą wisi krach",
-                    "link": "https://www.gazetaprawna.pl/wiadomosci/artykuly/841802,miedwiediew-nad-ukraina-wisi-krach.html"
-                },
-                {
-                    "date": "2015-02-19",
-                    "title": "Konflikt na Ukrainie ma kluczowy wpływ na relacje polsko-rosyjskie",
-                    "link": "https://pism.pl/konferencje/Konflikt_na_Ukrainie_ma_kluczowy_wp_yw_na_relacje_polsko_rosyjskie"
-                },
-                {
-                    "date": "2015-09-22",
-                    "title": "Ukraina ujawnia straty osobowe w wojnie z Rosją",
-                    "link": "https://defence24.pl/ukraina-ujawnia-straty-osobowe-w-wojnie-z-rosja"
-                },
-                {
-                    "date": "2016-05-16",
-                    "title": "Ukraina buduje mur na granicy z Rosją. 'Będą też rowy przeciwczołgowe'",
-                    "link": "https://www.rmf24.pl/fakty/swiat/news-ukraina-buduje-mur-na-granicy-z-rosja-beda-tez-rowy-przeciwc,nId,2202906#crp_state=1"                },
-                {
-                    "date": "2016-02-10",
-                    "title": "Porozumienie mińskie – rok gry pozorów",
-                    "link": "https://www.osw.waw.pl/pl/publikacje/analizy/2016-02-10/porozumienie-minskie-rok-gry-pozorow"
-                },
-                {
-                    "date": "2016-08-08",
-                    "title": "Krymska prowokacja i scenariusze wojny z Rosją",
-                    "link": "https://tvn24.pl/magazyn-tvn24/sierpniowa-klatwa-rosja-rozpeta-otwarta-wojne-z-ukraina,54,1189"
-                },
-                {
-                    "date": "2017-02-20",
-                    "title": "Najwięcej broni Ukraina sprzedaje... Rosji",
-                    "link": "https://www.rp.pl/biznes/art2905441-najwiecej-broni-ukraina-sprzedaje-rosji"
-                },
-                {
-                    "date": "2017-09-06",
-                    "title": "Rosyjska rozgrywka w sprawie sił ONZ w Donbasie",
-                    "link": "https://www.osw.waw.pl/pl/publikacje/analizy/2017-09-06/rosyjska-rozgrywka-w-sprawie-sil-onz-w-donbasie"
-                },
-                {
-                    "date": "2018-06-11",
-                    "title": "O sprawiedliwość i odszkodowania. Ukraina przeciwko Rosji w sądach międzynarodowych",
-                    "link": "https://www.osw.waw.pl/pl/publikacje/komentarze-osw/2018-06-11/o-sprawiedliwosc-i-odszkodowania-ukraina-przeciwko-rosji-w"
-                },
-                {
-                    "date": "2018-09-19",
-                    "title": "Kres traktatu o przyjaźni Ukrainy i Rosji",
-                    "link": "https://www.osw.waw.pl/pl/publikacje/analizy/2018-09-19/kres-traktatu-o-przyjazni-ukrainy-i-rosji"
-                },
-                {
-                    "date": "2015-02-19",
-                    "title": "Rosja zaostrza kurs wobec Ukrainy. Kolejne sankcje, kolejna lista osób bez wstępu",
-                    "link": "https://pism.pl/konferencje/Konflikt_na_Ukrainie_ma_kluczowy_wp_yw_na_relacje_polsko_rosyjskie"
-                },
-                {
-                    "date": "2015-02-19",
-                    "title": "Konflikt na Ukrainie ma kluczowy wpływ na relacje polsko-rosyjskie",
-                    "link": "https://pism.pl/konferencje/Konflikt_na_Ukrainie_ma_kluczowy_wp_yw_na_relacje_polsko_rosyjskie"
-                },
-                {
-                    "date": "2015-02-19",
-                    "title": "Konflikt na Ukrainie ma kluczowy wpływ na relacje polsko-rosyjskie",
-                    "link": "https://pism.pl/konferencje/Konflikt_na_Ukrainie_ma_kluczowy_wp_yw_na_relacje_polsko_rosyjskie"
-                },
-                {
-                    "date": "2015-02-19",
-                    "title": "Konflikt na Ukrainie ma kluczowy wpływ na relacje polsko-rosyjskie",
-                    "link": "https://pism.pl/konferencje/Konflikt_na_Ukrainie_ma_kluczowy_wp_yw_na_relacje_polsko_rosyjskie"
-                },
-                {
-                    "date": "2015-02-19",
-                    "title": "Konflikt na Ukrainie ma kluczowy wpływ na relacje polsko-rosyjskie",
-                    "link": "https://pism.pl/konferencje/Konflikt_na_Ukrainie_ma_kluczowy_wp_yw_na_relacje_polsko_rosyjskie"
-                },
-                {
-                    "date": "2015-02-19",
-                    "title": "Konflikt na Ukrainie ma kluczowy wpływ na relacje polsko-rosyjskie",
-                    "link": "https://pism.pl/konferencje/Konflikt_na_Ukrainie_ma_kluczowy_wp_yw_na_relacje_polsko_rosyjskie"
-                },
-                {
-                    "date": "2015-02-19",
-                    "title": "Konflikt na Ukrainie ma kluczowy wpływ na relacje polsko-rosyjskie",
-                    "link": "https://pism.pl/konferencje/Konflikt_na_Ukrainie_ma_kluczowy_wp_yw_na_relacje_polsko_rosyjskie"
+                    "year": "2022",
+                    "val": 11.53,
+                    "attrId": 1
                 }
             ]
         }

@@ -7,6 +7,11 @@ import Charts from '../Chart'
 var xml2js = require('xml2js');
 
 const Main = () => {
+    const [fileData, setFileData] = useState([])
+    const [fileProduct, setFileProduct] = useState("")
+
+    //used to narrow down years in chart
+    const [fileDataSecond, setFileDataSecond] = useState([])
     var parseString = require('xml2js').parseString;
     //navigation handlers
     const navigate = useNavigate()
@@ -20,13 +25,18 @@ const Main = () => {
         console.log(fileProduct)
         console.log(beginYear)
         console.log(endYear)
+        
+        let dat = fileDataSecond.values.filter((obj) => obj.year>"2001")
+        dat = dat.filter((obj) => obj.year<"2010")
+        setFileData({ ...fileDataSecond, values: [...dat] });
+
         //navigate('/')
     }
 
 
     //data handlers
-    const [fileData, setFileData] = useState([])
-    const [fileProduct, setFileProduct] = useState("")
+    
+
     const fileProducts = [
         {key: "rice", value: "Ryż - za 1kg"},
         {key: "butter", value: "Masło świeże o zawartości tłuszczu ok. 82,5% - za 200g"},
@@ -53,11 +63,13 @@ const Main = () => {
                 const data = json.results[0]
                 data.id = fileProduct
                 setFileData(data)
+                setFileDataSecond(data)
             } else {
                 console.log(json)
                 const data = json
                 data.id = fileProduct
                 setFileData(data)
+                setFileDataSecond(data)
             }
         })
     }
@@ -78,6 +90,7 @@ const Main = () => {
                         attrId: parseInt(item.attrId[0])
                     })
                     setFileData(x)
+                    setFileDataSecond(x)
                 }
                 if(result.root){
                     const x = result.root
@@ -89,6 +102,7 @@ const Main = () => {
                         attrId: parseInt(item.attrId[0])
                     })
                     setFileData(x)
+                    setFileDataSecond(x)
                 }
             });
         })
@@ -104,6 +118,17 @@ const Main = () => {
             }
         }     
     }, [fileData])
+
+    useEffect(() => {
+        if(fileData.values.length>0){
+            if(beginYear && endYear){
+                let dat = fileDataSecond.values.filter((obj) => obj.year>=beginYear)
+                dat = dat.filter((obj) => obj.year<=endYear)
+                setFileData({ ...fileDataSecond, values: [...dat] });
+                console.log("xx")
+            }
+        }     
+    }, [beginYear, endYear])
     
     const handleImportJson = () => {
         getData(fileProduct)
@@ -128,6 +153,7 @@ const Main = () => {
                 product: fileProduct
             })
             setFileData(data.data)
+            setFileDataSecond(data.data)
             console.log("Pobrano dane Mongo")
             alert("Zaimportowano dane z bazy!")
         } catch (e) {
@@ -147,9 +173,19 @@ const Main = () => {
             alert(e.response.data.message)
             console.log(e)
         }
+    }
+    const handleImportAPI = async () => {
+
+    }
+
+    const handleExportAPI = async () => {
         
     }
 
+    const handleLog = () => {
+        console.log(fileData)
+        console.log(fileDataSecond)
+    }
 
     //main
     return (
@@ -183,14 +219,14 @@ const Main = () => {
                             <button className={styles.gray_btn} onClick = {handleExportXml}>Eksportuj XML</button>
                         </div>
                         <div className={styles.file_buttons}>
-                            <h2>Operacje na bazie danych</h2>
+                            <h2>Operacje na bazie danych*</h2>
                             <button className={styles.gray_btn} onClick = {handleImportDb}>Importuj SQL</button>
                             <button className={styles.gray_btn} onClick = {handleExportDb}>Eksportuj SQL</button>
                         </div>
                         <div className={styles.file_buttons}>
-                            <h2>Operacje na API i resetowanie danych</h2>
-                            <button className={styles.gray_btn} onClick = {handleImportDb}>Importuj API</button>
-                            <button className={styles.gray_btn} onClick = {handleExportDb}>Reset danych</button>
+                            <h2>Operacje na API i resetowanie danych*</h2>
+                            <button className={styles.gray_btn} onClick = {handleImportAPI}>Importuj API</button>
+                            <button className={styles.gray_btn} onClick = {handleExportAPI}>Reset danych</button>
                         </div>
                     </div>
                 }
@@ -201,7 +237,9 @@ const Main = () => {
                             <div className={styles.select_box_3}>
                                 <h3>Data początkowa</h3>
                                 <select className = {styles.select} onChange={e => setBeginYear(e.target.value)} on>
-                                    {fileData.values.map(obj=>(
+                                    {fileDataSecond.values
+                                    .filter(obj => obj.year < endYear)
+                                    .map(obj=>(
                                         <option key={obj.year} value = {obj.year}>{obj.year}</option>
                                     ))}
                                 </select>
@@ -209,7 +247,9 @@ const Main = () => {
                             <div className={styles.select_box_3}>
                                 <h3>Data końcowa</h3>
                                 <select className = {styles.select} onChange={e => setEndYear(e.target.value)}>
-                                {fileData.values.map(obj=>(
+                                {fileDataSecond.values
+                                .filter(obj => obj.year > beginYear)
+                                .map(obj=>(
                                     <option selected key={obj.year} value = {obj.year}>{obj.year}</option>
                                 ))}
                                 </select>
