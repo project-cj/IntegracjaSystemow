@@ -12,6 +12,8 @@ const Main = () => {
 
     //used to narrow down years in chart
     const [fileDataSecond, setFileDataSecond] = useState([])
+    const [articles, setAtricles] = useState([])
+
     var parseString = require('xml2js').parseString;
     //navigation handlers
     const navigate = useNavigate()
@@ -25,6 +27,9 @@ const Main = () => {
         console.log(fileProduct)
         console.log(beginYear)
         console.log(endYear)
+        console.log(articles)
+        const years = articles.filter((obj) => obj.date>"2016")
+        console.log(years)
         //navigate('/')
     }
     //data handlers
@@ -128,8 +133,23 @@ const Main = () => {
             alert(e)
             console.log(e)
         }
-        
     }
+
+    const getArticles = async () => {
+        try {
+            const data = await axios.post('http://localhost:8080/api/article/import')
+            setAtricles(data.data[0].values)
+            console.log("Pobrano artykuły Mongo")
+            console.log(articles)
+        } catch (e) {
+            alert(e.response.data.message)
+            console.log(e)
+        }
+    }
+
+    useEffect(() => {
+        getArticles()
+    }, [])
     
     useEffect(() => {
         if(fileData.values.length>0){
@@ -282,6 +302,23 @@ const Main = () => {
                 }
                 {/*fileData && fileData.values.length>0 && fileData.values.map((item, key) => <p key={key}>Rok: {item.year} Cena: {item.val}</p>)*/}
                 {fileData && fileData.values.length>0 && <Charts data={fileData}></Charts>}
+                {fileData && fileData.values.length>0 && 
+                    <div className={styles.articles}>
+                        <h2>Artykuły</h2>
+                        <table>
+                            <tr>
+                                <td className={styles.tdDate}><h3>Data</h3></td>
+                                <td className={styles.tdTitle}><h3>Tytuł</h3></td>
+                            </tr>
+                            {articles.filter((obj) => obj.date>beginYear && obj.date<endYear+1)
+                            .map(obj =>(
+                                <tr>
+                                    <td className={styles.tdDate}>{obj.date}</td>
+                                    <td className={styles.tdTitle}><a href={obj.link} target="_blank">{obj.title}</a></td>
+                                </tr>
+                            ))}
+                        </table>
+                    </div>}
                 
             </div>
         </div>

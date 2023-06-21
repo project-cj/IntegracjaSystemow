@@ -8,6 +8,7 @@ const db = require('./db.js')
 const userRoutes = require('./routes/userRoutes.js')
 const authRoutes = require('./routes/authRoutes.js')
 const itemRoutes = require('./routes/itemRoutes.js')
+const articleRoutes = require('./routes/articlesRoutes.js')
 
 
 //middleware
@@ -17,6 +18,7 @@ app.use(cors())
 app.use("/api/users", userRoutes)
 app.use("/api/auth", authRoutes)
 app.use("/api/item", itemRoutes)
+app.use("/api/article", articleRoutes)
 
 
 const port = process.env.PORT

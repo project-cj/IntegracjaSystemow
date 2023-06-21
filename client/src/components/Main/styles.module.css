@@ -95,3 +95,31 @@
 h2{
 	text-align: center;
 }
+.articles{
+	margin: 20px 200px;
+}
+table td{
+	border-bottom: 1px solid #ddd;
+	padding: 5px 5px;
+}
+table h3{
+	text-align: center;
+}
+.tdDate{
+	width: 10%;
+	text-align: right;
+}
+.tdTitle{
+	border-left: 1px solid #ddd;
+	width: 50%;
+}
+.tdTitle a{
+	font-style: oblique;
+	color: black;
+}
+.tdTitle a:hover{
+	text-decoration: none;
+}
+.tdTitle a:visited{
+	color: rgb(108, 99, 99);
+}
