@@ -12,6 +12,7 @@ const Main = () => {
 
     //used to narrow down years in chart
     const [fileDataSecond, setFileDataSecond] = useState([])
+
     const [articles, setAtricles] = useState([])
 
     var parseString = require('xml2js').parseString;
@@ -138,6 +139,12 @@ const Main = () => {
     const getArticles = async () => {
         try {
             const data = await axios.post('http://localhost:8080/api/article/import')
+            console.log("data:", data.data[0].values)
+            data.data[0].values.sort((a, b) => {
+                const dateA = new Date(a.date);
+                const dateB = new Date(b.date);
+                return dateA - dateB;
+            });
             setAtricles(data.data[0].values)
             console.log("Pobrano artykuły Mongo")
             console.log(articles)
@@ -221,7 +228,8 @@ const Main = () => {
     }
 
     const handleResetData = () => {
-        
+        setFileData([])
+        setFileDataSecond([])
     }
 
     /*
